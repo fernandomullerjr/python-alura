@@ -16,6 +16,8 @@ else:
 O problema é que o código dela não funciona. Consegue enxergar onde está o problema? Para quem está começando com Python, pode ser bem sutil. Descobriu? Clique em Ver Opinião do Instrutor, que você verá a resposta do instrutor.
 
 
+
+
 # Opinião do instrutor
 
 O problema é que para indicar o início do bloco if, é necessário utilizar dois pontos (:). Veja que no código dele faltou os dois pontos. O código corrigido ficará assim:

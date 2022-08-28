@@ -1,4 +1,7 @@
 
+# ################################################################################################################################################################
+# ################################################################################################################################################################
+# ################################################################################################################################################################
 # 04 - If..else. e nada funciona!
 
 Henrique, mesmo dando os primeiros passos com a linguagem Python, decidiu criar um sistema de identificação de usuários. É claro que em uma aplicação real é necessário acessar o banco de dados, entre outras coisas, mas usando o que ele já aprendeu, ele conseguiu algo parecido. Esse é o código do aluno:
@@ -24,6 +27,9 @@ Consegue identificar a razão? Quebre a cabeça um pouquinho.
 
 
 
+# ################################################################################################################################################################
+# ################################################################################################################################################################
+# ################################################################################################################################################################
 # TSHOOT
 
 
@@ -80,3 +86,27 @@ Informe o usuário do sistema!Nico
 Seja bem-vindo Nico
 fernando@debian10x64:~/cursos/python/python-alura$
 ~~~~
+
+
+
+# ################################################################################################################################################################
+# ################################################################################################################################################################
+# ################################################################################################################################################################
+# Opinião do instrutor
+
+O problema é que a instrução else não aceita receber uma condição. Nesse caso, para resolver o problema do código, precisamos trocar para a instrução elif:
+
+~~~~python
+usuario = input("Informe o usuário do sistema!")
+
+if(usuario == "Flávio"):
+    print("Seja bem-vindo Flávio!")
+elif(usuario == "Douglas"):
+    print("Seja bem-vindo Douglas!")
+elif(usuario == "Nico"):
+    print("Seja bem-vindo Nico")
+else:
+    print("Usuário não identificado!")
+~~~~
+
+Veja que deixamos apenas um else que não recebe qualquer condição. Também tem que ser assim, porque se o usuário identificado não for nenhum dos que listamos, imprimimos na tela "Usuário não identificado".

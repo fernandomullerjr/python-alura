@@ -5,12 +5,13 @@
 # ###################################################################################################################################################################
 # PUSH
 
+git status
 git add .
 git commit -m "Modulo 4 - aula 01 - Laço com while."
 eval $(ssh-agent -s)
 ssh-add /home/fernando/.ssh/chave-debian10-github
 git push
-
+git status
 
 
 
@@ -107,6 +108,13 @@ fernando@debian10x64:~/cursos/python/python-alura/python-comecando-com-a-linguag
 
 
 
+git status
+git add .
+git commit -m "Modulo 4 - aula 01 - Laço com while. pt2"
+eval $(ssh-agent -s)
+ssh-add /home/fernando/.ssh/chave-debian10-github
+git push
+git status 
 
 
 Só que o Python não entende português, então vamos traduzi-lo. A palavra tentativas será uma variável, chamaremos-a de total_de_tentativas:
@@ -379,8 +387,8 @@ Agora conseguimos imprimir para o usuário quantas tentativas restantes ele poss
 
 git status
 git add .
-git commit -m "Modulo 4 - aula 01 - Laço com while. pt2"
+git commit -m "Modulo 4 - aula 01 - Laço com while. pt3 . Códigos corrigidos e versão final"
 eval $(ssh-agent -s)
 ssh-add /home/fernando/.ssh/chave-debian10-github
 git push
-git status 
+git status

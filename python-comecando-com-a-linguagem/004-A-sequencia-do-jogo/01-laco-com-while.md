@@ -27,27 +27,83 @@ Só que copiar código sempre é uma má prática, queremos escrever o nosso có
 enquanto ainda há tentativas:
 
 ~~~~python
-    chute_str = input("Digite o seu número: ")
-    print("Você digitou: ", chute_str)
-    chute = int(chute_str)
-
-    acertou = numero_secreto == chute
-    maior = chute > numero_secreto
-    menor = chute < numero_secreto
-
-    if (acertou):
-        print("Você acertou!")
-    else:
-        if (maior):
-            print("Você errou! O seu chute foi maior que o número secreto.")
-        elif (menor):
-            print("Você errou! O seu chute foi menor que o número secreto.")
+chute_str = input("Digite o seu número: ")
+print("Você digitou: ", chute_str)
+chute = int(chute_str)
+acertou = numero_secreto == chute
+maior = chute > numero_secreto
+menor = chute < numero_secreto
+if (acertou):
+    print("Você acertou!")
+else:
+    if (maior):
+        print("Você errou! O seu chute foi maior que o número secreto.")
+    elif (menor):
+        print("Você errou! O seu chute foi menor que o número secreto.")
 
 print("Fim do jogo")
 ~~~~
 
 
 
+
+- Exemplo de código em Python onde os blocos de if são repetidos algumas vezes, mas não é algo prático:
+
+~~~~python
+# Neste código, para ter um efeito parecido com o laço do while, precisamos repetir o bloco de código várias vezes.
+# Isto não é algo prático!
+
+# 1º tentativa
+numero_secreto = 42
+chute_str = input("Digite o seu número: ")
+print("Você digitou: ", chute_str)
+chute = int(chute_str)
+acertou = chute == numero_secreto
+maior = chute > numero_secreto
+menor = chute < numero_secreto
+if (acertou):
+    print("Você acertou!")
+else:
+    if (maior):
+        print("Você errou! O seu chute foi maior que o número secreto.")
+    elif (menor):
+        print("Você errou! O seu chute foi menor que o número secreto.")
+print("Fim do jogo")
+
+# 2º tentativa
+numero_secreto = 42
+chute_str = input("Digite o seu número: ")
+print("Você digitou: ", chute_str)
+chute = int(chute_str)
+acertou = chute == numero_secreto
+maior = chute > numero_secreto
+menor = chute < numero_secreto
+if (acertou):
+    print("Você acertou!")
+else:
+    if (maior):
+        print("Você errou! O seu chute foi maior que o número secreto.")
+    elif (menor):
+        print("Você errou! O seu chute foi menor que o número secreto.")
+print("Fim do jogo")
+~~~~
+
+
+
+- RESULTADO REPETINDO O CÓDIGO ALGUMAS VEZES:
+
+~~~~bash
+fernando@debian10x64:~/cursos/python/python-alura/python-comecando-com-a-linguagem$ python3 /home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/004-A-sequencia-do-jogo/01-forma-errada-repetindo-blocos-para-ter-repeticao.py
+Digite o seu número: 33
+Você digitou:  33
+Você errou! O seu chute foi menor que o número secreto.
+Fim do jogo
+Digite o seu número: 55
+Você digitou:  55
+Você errou! O seu chute foi maior que o número secreto.
+Fim do jogo
+fernando@debian10x64:~/cursos/python/python-alura/python-comecando-com-a-linguagem$
+~~~~
 
 Só que o Python não entende português, então vamos traduzi-lo. A palavra tentativas será uma variável, chamaremos-a de total_de_tentativas:
 

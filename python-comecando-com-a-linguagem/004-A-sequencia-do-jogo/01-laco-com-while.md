@@ -1,5 +1,23 @@
 
 
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# PUSH
+
+git add .
+git commit -m "Modulo 4 - aula 01 - Laço com while."
+eval $(ssh-agent -s)
+ssh-add /home/fernando/.ssh/chave-debian10-github
+git push
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# Laço com While
+
 # Transcrição
 
 Queremos dar mais de uma oportunidade para o usuário tentar acertar o número secreto, já que é um jogo de adivinhação. A primeira ideia é repetir o código, desde a função input até o bloco do elif. Ou seja, para cada nova tentativa que quisermos dar ao usuário, copiaríamos esse código novamente.

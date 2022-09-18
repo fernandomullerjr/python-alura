@@ -46,3 +46,13 @@ mes = "fevereiro"
 ano = 2017
 print("Em {} o Carnaval acontece em {} do dia {} até o dia {}".format(ano, mes, dia_ini, dia_fim))
 ~~~~
+
+
+- Testando
+python3 /home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/004-A-sequencia-do-jogo/05-resposta-formatacao.py
+
+~~~~bash
+fernando@debian10x64:~/cursos/python/python-alura$ python3 /home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/004-A-sequencia-do-jogo/05-resposta-formatacao.py
+Em 2017 o Carnaval acontece em fevereiro do dia 24 até o dia 28
+fernando@debian10x64:~/cursos/python/python-alura$
+~~~~

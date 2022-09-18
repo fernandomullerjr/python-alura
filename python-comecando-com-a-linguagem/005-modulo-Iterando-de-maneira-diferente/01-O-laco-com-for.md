@@ -182,3 +182,15 @@ Você errou! O seu chute foi maior que o número secreto.
 Fim do jogo
 fernando@debian10x64:~/cursos/python/python-alura$
 ~~~~
+
+
+
+# PUSH
+
+git status
+git add .
+git commit -m "Modulo 5 - aula 01 - O laço com for."
+eval $(ssh-agent -s)
+ssh-add /home/fernando/.ssh/chave-debian10-github
+git push
+git status

@@ -129,3 +129,117 @@ Digite um número entre 1 e 100:
 Perfeito! O número digitado era incorreto, então fomos para a próxima tentativa.
 
 Então vimos aqui o break, que acaba, encerra o laço; e o continue, que acaba, encerra a iteração, continuando para a próxima.
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# Testes dos códigos
+
+- Novo código do jogo, usando break:
+
+~~~~python
+numero_secreto = 42
+total_de_tentativas = 3
+
+for rodada in range(1, total_de_tentativas + 1):
+    print("Tentativa {} de {}".format(rodada, total_de_tentativas))
+    chute_str = input("Digite o seu número: ")
+    print("Você digitou: ", chute_str)
+    chute = int(chute_str)
+
+    acertou = numero_secreto == chute
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
+
+    if (acertou):
+        print("Você acertou!")
+        break
+    else:
+        if (maior):
+            print("Você errou! O seu chute foi maior que o número secreto.")
+        elif (menor):
+            print("Você errou! O seu chute foi menor que o número secreto.")
+
+print("Fim do jogo")
+~~~~
+
+- Testando o break
+/home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/005-modulo-Iterando-de-maneira-diferente/04-break.py
+
+~~~~bash
+fernando@debian10x64:~/cursos/python/python-alura$ python3 /home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/005-modulo-Iterando-de-maneira-diferente/04-break.py
+Tentativa 1 de 3
+Digite o seu número: 33
+Você digitou:  33
+Você errou! O seu chute foi menor que o número secreto.
+Tentativa 2 de 3
+Digite o seu número: 42
+Você digitou:  42
+Você acertou!
+Fim do jogo
+fernando@debian10x64:~/cursos/python/python-alura$
+~~~~
+
+
+
+
+
+- Novo código do jogo, usando break:
+
+~~~~python
+numero_secreto = 42
+total_de_tentativas = 3
+
+for rodada in range(1, total_de_tentativas + 1):
+    print("Tentativa {} de {}".format(rodada, total_de_tentativas))
+    chute_str = input("Digite o seu número: ")
+    print("Você digitou: ", chute_str)
+    chute = int(chute_str)
+
+    acertou = numero_secreto == chute
+    maior = chute > numero_secreto
+    menor = chute < numero_secreto
+
+    if (chute < 1 or chute > 100):
+        print("Você deve digitar um número entre 1 e 100!")
+        continue
+
+    if (acertou):
+        print("Você acertou!")
+        break
+    else:
+        if (maior):
+            print("Você errou! O seu chute foi maior que o número secreto.")
+        elif (menor):
+            print("Você errou! O seu chute foi menor que o número secreto.")
+
+print("Fim do jogo")
+~~~~
+
+
+- Testando
+/home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/005-modulo-Iterando-de-maneira-diferente/04-continue.py
+
+python3 /home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/005-modulo-Iterando-de-maneira-diferente/04-continue.py
+
+~~~~bash
+fernando@debian10x64:~/cursos/python/python-alura$ python3 /home/fernando/cursos/python/python-alura/python-comecando-com-a-linguagem/005-modulo-Iterando-de-maneira-diferente/04-continue.py
+Tentativa 1 de 3
+Digite o seu número: 14555
+Você digitou:  14555
+Você deve digitar um número entre 1 e 100!
+Tentativa 2 de 3
+Digite o seu número: -68
+Você digitou:  -68
+Você deve digitar um número entre 1 e 100!
+Tentativa 3 de 3
+Digite o seu número: 22
+Você digitou:  22
+Você errou! O seu chute foi menor que o número secreto.
+Fim do jogo
+fernando@debian10x64:~/cursos/python/python-alura$
+~~~~

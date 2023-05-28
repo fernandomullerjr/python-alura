@@ -109,7 +109,14 @@ Não se preocupe em decorar a sintaxe, o importante é saber que no Python exist
 # ###################################################################################################################################################################
 # 09 Para saber mais: Formatação de strings
 
+- Aula para trazer mais exemplos de interpolação de strings.
 
+- Material de apoio:
+https://docs.python.org/3/library/string.html#formatexamples
+<https://docs.python.org/3/library/string.html#formatexamples>
+
+
+## Exemplo de format mais comum
 >>> print("Tentativa {} de {}".format(1, 3))
 Tentativa 1 de 3
 >>>

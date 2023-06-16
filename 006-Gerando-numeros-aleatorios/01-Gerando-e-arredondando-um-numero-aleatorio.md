@@ -330,3 +330,9 @@ random.random()
 >>> random.random() * 100
 35.357098543216296
 >>>
+
+
+
+
+- Continua em
+6:35

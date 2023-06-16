@@ -261,3 +261,72 @@ zip()
 
 _
 __import__()
+
+
+
+
+
+
+
+
+
+
+
+>>>  random.random()
+  File "<stdin>", line 1
+    random.random()
+    ^
+IndentationError: unexpected indent
+>>>
+
+
+
+- Esse nome que vem a frente na documentação, antes do ponto, é conhecido como biblioteca ou módulo no Python.
+
+
+- Neste caso é necessário usar o import, então ele passa a gerar os números aleatórios:
+
+>>> import random
+>>>
+>>> random.random()
+0.4413279822277377
+>>>
+>>>
+>>>
+
+
+
+
+random.random()
+
+    Return the next random floating point number in the range 0.0 <= X < 1.0
+
+
+
+
+
+>>> random.random() * 100
+5.740263620076047
+>>>
+>>>
+>>> random.random() * 100
+55.39283415658392
+>>>
+>>> random.random() * 100
+1.13590870013196
+>>>
+>>>
+>>> random.random() * 100
+18.858163667988347
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> random.random() * 100
+35.357098543216296
+>>>

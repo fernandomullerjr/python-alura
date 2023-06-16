@@ -115,3 +115,149 @@ print("Fim do jogo")
 
 - Gerando novo arquivo:
 /home/fernando/cursos/python/python-alura/006-Gerando-numeros-aleatorios/01-jogo.py
+
+
+
+- Verificando a documentação do random:
+<https://docs.python.org/3/library/random.html>
+
+
+
+
+- Testando
+
+>>> print("teste")
+teste
+>>>
+>>> random()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'random' is not defined
+>>>
+
+
+- O random não funciona direto que nem o print e outras funções, porque ele não é uma Built-in.
+- Listagem das
+<https://docs.python.org/3/library/functions.html>
+
+
+Built-in Functions
+
+The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order.
+
+Built-in Functions
+A
+abs()
+aiter()
+all()
+any()
+anext()
+ascii()
+
+B
+bin()
+bool()
+breakpoint()
+bytearray()
+bytes()
+
+C
+callable()
+chr()
+classmethod()
+compile()
+complex()
+
+D
+delattr()
+dict()
+dir()
+divmod()
+
+	
+E
+enumerate()
+eval()
+exec()
+
+F
+filter()
+float()
+format()
+frozenset()
+
+G
+getattr()
+globals()
+
+H
+hasattr()
+hash()
+help()
+hex()
+
+I
+id()
+input()
+int()
+isinstance()
+issubclass()
+iter()
+	
+L
+len()
+list()
+locals()
+
+M
+map()
+max()
+memoryview()
+min()
+
+N
+next()
+
+O
+object()
+oct()
+open()
+ord()
+
+P
+pow()
+print()
+property()
+
+
+
+
+	
+R
+range()
+repr()
+reversed()
+round()
+
+S
+set()
+setattr()
+slice()
+sorted()
+staticmethod()
+str()
+sum()
+super()
+
+T
+tuple()
+type()
+
+V
+vars()
+
+Z
+zip()
+
+_
+__import__()

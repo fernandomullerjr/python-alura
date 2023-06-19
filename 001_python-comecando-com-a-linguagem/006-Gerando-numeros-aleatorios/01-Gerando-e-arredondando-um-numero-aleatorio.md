@@ -336,3 +336,75 @@ random.random()
 
 - Continua em
 6:35
+
+
+
+
+
+
+
+# Dia 18/06/2023
+
+## Arredondando o número randomico, usando int
+
+numero_random = random.random() * 100
+
+- A função int corta as casas decimais neste caso
+int(numero_random)
+
+
+>>> random.random()
+0.039096788467642196
+>>> random.random() * 100
+77.87018832798239
+>>> numero_random = random.random() * 100
+>>>
+>>>
+>>>
+>>> int(numero_random)
+2
+>>>
+>>> int(numero_random)
+2
+>>>
+>>> numero_random
+2.5867919290499586
+>>>
+
+
+
+## Arredondando o número randomico, usando round
+
+- O round() é uma função Built-in
+round(numero_random)
+
+- Testando
+
+>>> numero_random
+2.5867919290499586
+>>>
+>>>
+>>> round(numero_random)
+3
+>>>
+
+- Ele arredonda o valor pra cima, neste caso.
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# RESUMO
+
+- Para usar o random, é necessário efetuar import, porque ele não é uma função Built-in.
+import random
+random.random()
+random.random() * 100
+
+- Podemos deixar o número arredondado usando int:
+int(numero_random)
+
+- Podemos deixar o número arredondado usando round:
+round(numero_random)

@@ -261,3 +261,4 @@ numero_secreto = random.randrange(1, 101)
 ~~~~
 
 - Usando esta função randrange do módulo random, ele já traz o número aleatório de forma mais profissional, sem precisarmos adaptar manualmente usando o round(para arredondar) e sem precisar fazer algum cálculo adicional.
+- No próximo capítulo vamos focar na dificuldade do jogo. Um jogo mais fácil terá um número de tentativas maior, e um mais difícil terá um número de tentativas menor.

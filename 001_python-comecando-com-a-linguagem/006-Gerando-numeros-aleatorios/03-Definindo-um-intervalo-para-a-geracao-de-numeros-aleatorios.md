@@ -187,5 +187,77 @@ randrange(0, 101, 2) # Número inteiro par de 0 a 100 inclusive
 
 
 
+
+
+>>> random.randrange(1, 101)
+25
+>>> random.randrange(1, 101)
+84
+>>>
+
+
+
+
 Continua em
 5:32
+
+
+
+## Dia 01/07/2023
+
+import random
+random.randrange(1, 101)
+
+>>>
+import random
+random.randrange(1, 101)>>> >>>
+54
+>>>
+import random
+random.randrange(1, 101)>>> >>>
+30
+>>>
+import random
+random.randrange(1, 101)>>> >>>
+66
+>>>
+import random
+random.randrange(1, 101)>>> >>>
+5
+>>>
+import random
+random.randrange(1, 101)>>> >>>
+13
+>>>
+
+
+
+- Trazendo apenas números pares, de forma aleatória e dentro do range
+random.randrange(0, 101, 2)
+
+>>> random.randrange(0, 101, 2)
+78
+>>> random.randrange(0, 101, 2)
+26
+>>> random.randrange(0, 101, 2)
+72
+>>> random.randrange(0, 101, 2)
+46
+>>>
+
+
+
+
+
+Vamos, passando o intervalo que queremos para a função randrange(), lembrando que como queremos que o número gerado esteja entre 1 e 100 (inclusive), precisamos passar o número 101 como segundo parâmetro para a função:
+
+/home/fernando/cursos/python/python-alura/001_python-comecando-com-a-linguagem/006-Gerando-numeros-aleatorios/03-jogo-usando-randrange.py
+
+~~~~python
+import random
+# restante do código omitido
+numero_secreto = random.randrange(1, 101)
+# restante do código omitido
+~~~~
+
+- Usando esta função randrange do módulo random, ele já traz o número aleatório de forma mais profissional, sem precisarmos adaptar manualmente usando o round(para arredondar) e sem precisar fazer algum cálculo adicional.

@@ -4,7 +4,7 @@ print("*********************************")
 print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
-numero_secreto = round(random.random() * 100)
+numero_secreto = random.randrange(1, 101)
 total_de_tentativas = 3
 
 # O bloco de código dentro do loop for será executado por cada rodada do jogo. 

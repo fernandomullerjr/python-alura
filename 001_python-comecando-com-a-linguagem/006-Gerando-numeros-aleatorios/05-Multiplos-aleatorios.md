@@ -121,3 +121,57 @@ Neste exemplo, o valor de num_float é 10.999, e ao aplicar int() a esse valor, 
 Agora, voltando ao código original int(random.random() * 101), a expressão random.random() * 101 pode gerar valores de 0.0 (incluindo) até 101.0 (excluindo). No entanto, quando você usa int() para converter esse valor em um inteiro, ele simplesmente corta a parte decimal, resultando em valores inteiros entre 0 e 100 (inclusive).
 
 Em resumo, o truncamento descarta a parte decimal de um número de ponto flutuante ao convertê-lo em um inteiro. Por causa disso, o código original não pode gerar o número 101, apenas valores entre 0 e 100 (ambos os extremos incluídos). Para incluir o número 101, você precisaria usar outras abordagens, como a função random.randint() que mencionei anteriormente.
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# Explicação adicional sobre o motivo do valor 101 não estar incluso
+
+Vamos esclarecer corretamente o que acontece com o número 101 na expressão int(random.random() * 101).
+
+Ao usar a função random.random(), o valor retornado está no intervalo semi-aberto [0.0, 1.0), o que significa que ele pode incluir 0.0, mas exclui 1.0.
+
+Quando esse valor é multiplicado por 101, obtemos um novo intervalo semi-aberto [0.0, 101.0), o qual inclui 0.0, mas exclui 101.0.
+
+Aqui está a parte importante: quando usamos a função int() para converter um número de ponto flutuante em um inteiro, ela não realiza um arredondamento normal. Em vez disso, ela simplesmente remove a parte decimal, truncando o valor sem considerar se a parte decimal é maior ou igual a 0.5.
+
+Portanto, se o valor gerado estiver em [0.0, 100.999...), ele será truncado para 100. Isso ocorre porque a parte decimal (0.999...) é descartada e não é considerada para arredondamento.
+
+Veja um exemplo:
+
+Suponha que random.random() retorne exatamente o valor de 0.999... (infinitos noves após o ponto decimal). Então, a expressão seria int(0.999... * 101), que resultaria em int(101.0), e, portanto, seria truncado para 101.
+
+No entanto, como random.random() gera números com muitos dígitos decimais aleatórios, a chance de obter exatamente 0.999... é extremamente baixa, quase insignificante. Portanto, na prática, não vemos o valor 101 sendo gerado na expressão int(random.random() * 101), mas sim valores entre 0 e 100 (ambos incluídos).
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# função random.random()
+
+Vou explicar corretamente como funciona a função random.random().
+
+A função random.random() faz parte do módulo random em Python e é usada para gerar números aleatórios de ponto flutuante no intervalo [0.0, 1.0). O intervalo é semi-aberto, o que significa que inclui o valor 0.0, mas exclui o valor 1.0.
+
+Aqui está como você pode usar a função random.random():
+
+
+~~~~python
+
+import random
+
+numero_aleatorio = random.random()
+print(numero_aleatorio)
+~~~~
+
+
+Cada vez que você executar esse código, a função random.random() retornará um número aleatório no intervalo [0.0, 1.0), ou seja, um número de ponto flutuante entre 0.0 (incluindo) e 1.0 (excluindo). O valor retornado será escolhido aleatoriamente de acordo com o gerador de números pseudoaleatórios do Python.
+
+O termo "pseudoaleatório" significa que, embora os números pareçam ser aleatórios, eles são gerados por um algoritmo determinístico. Isso significa que, dada a mesma semente (semente aleatória), a sequência de números gerada será a mesma. No entanto, essa sequência pode parecer aleatória para um observador externo.
+
+Caso você precise gerar números inteiros aleatórios em um intervalo específico, você pode usar outras funções do módulo random, como random.randint(a, b), que gera um número inteiro entre a e b (ambos incluídos).

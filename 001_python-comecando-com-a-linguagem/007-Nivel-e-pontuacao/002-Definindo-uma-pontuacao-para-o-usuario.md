@@ -343,7 +343,6 @@ print("Fim do jogo")
 
 ~~~~bash
 
-
 fernando@debian10x64:~$ python3 /home/fernando/cursos/python/python-alura/001_python-comecando-com-a-linguagem/007-Nivel-e-pontuacao/002-jogo-com-pontuacao.py
 *********************************
 Bem vindo ao jogo de Adivinhação!

@@ -83,3 +83,57 @@ if(maior):
 O 'if (rodada == total_de_tentativas):' ficará igual tanto dentro da cláusula 'elif(menor)'.
 
 Teste o seu jogo e verifique o nível e a pontuação!
+
+
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# 05 Mão na massa: Níveis e Pontuação
+
+- Testando
+
+~~~~bash
+fernando@debian10x64:~$ python3 /home/fernando/cursos/python/python-alura/001_python-comecando-com-a-linguagem/007-Nivel-e-pontuacao/005-nova-versao-pontuacao.py
+*********************************
+Bem vindo ao jogo de Adivinhação!
+*********************************
+Qual o nível de dificuldade?
+(1) Fácil (2) Médio (3) Difícil
+Defina o nível: 3
+Tentativa 1 de 5
+Digite o seu número: 100
+Você digitou:  100
+Você errou! O seu chute foi maior que o número secreto.
+Tentativa 2 de 5
+Digite o seu número: 99
+Você digitou:  99
+Você errou! O seu chute foi maior que o número secreto.
+Tentativa 3 de 5
+Digite o seu número: 98
+Você digitou:  98
+Você errou! O seu chute foi maior que o número secreto.
+Tentativa 4 de 5
+Digite o seu número: 97
+Você digitou:  97
+Você errou! O seu chute foi maior que o número secreto.
+Tentativa 5 de 5
+Digite o seu número: 96
+Você digitou:  96
+Você errou! O seu chute foi maior que o número secreto.
+O número secreto era 54. Você fez 822
+Fim do jogo
+fernando@debian10x64:~$
+fernando@debian10x64:~$
+fernando@debian10x64:~$
+fernando@debian10x64:~$
+fernando@debian10x64:~$
+fernando@debian10x64:~$ date
+Fri 08 Sep 2023 09:19:53 PM -03
+fernando@debian10x64:~$
+~~~~

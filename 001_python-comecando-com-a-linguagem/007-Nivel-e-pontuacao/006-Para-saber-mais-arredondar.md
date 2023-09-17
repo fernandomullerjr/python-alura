@@ -41,10 +41,25 @@ Mais informações se encontram na documentação do Python 3: https://docs.pyth
 
 
 
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# Round
+
+Detalhes sobre o funcionamento do arredondamento, usando a função round
 
 https://docs.python.org/3.5/library/functions.html#round
-
 <https://docs.python.org/3.5/library/functions.html#round>
+
+round(número[, dígitos])
+
+     Retorna o número arredondado para precisão de dígitos após a vírgula decimal. Se ndigits for omitido ou for None, ele retornará o número inteiro mais próximo de sua entrada.
+
+     Para os tipos integrados que suportam round(), os valores são arredondados para o múltiplo mais próximo de 10 elevado à potência menos dígitos; se dois múltiplos forem igualmente próximos, o arredondamento será feito para a escolha par (assim, por exemplo, tanto round(0,5) quanto round(-0,5) são 0, e round(1,5) é 2). Qualquer valor inteiro é válido para dígitos (positivo, zero ou negativo). O valor de retorno é um número inteiro se chamado com um argumento, caso contrário, é do mesmo tipo que número.
+
+     Para um número geral de objeto Python, round(number, ndigits) delega para number.__round__(ndigits).
+
+
+
 
 # ###################################################################################################################################################################
 # ###################################################################################################################################################################
@@ -52,3 +67,5 @@ https://docs.python.org/3.5/library/functions.html#round
 
 - Executando round(3.5) no Python 3 dará o valor 4 (tipo inteiro), e com Python 2 dará o valor 4.0 (tipo decimal).
 - Python 3 sempre devolve um valor do tipo int, enquanto o Python 2 devolve o tipo float.
+- Arredondando o valor 4.5 com Python 2, dará o valor 5.0 e no Python 3 dará o valor 4.
+- O Python 3 usa uma forma de arredondar, que também é chamado de Banker's rounding. 

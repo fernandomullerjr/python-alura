@@ -233,3 +233,13 @@ Sun 17 Sep 2023 12:32:55 AM -03
 fernando@debian10x64:~$
 
 ~~~~
+
+
+
+python3 /home/fernando/cursos/python/python-alura/001_python-comecando-com-a-linguagem/008-Organizando-ainda-melhor-o-nosso-codigo/adivinhacao.py
+
+fernando@debian10x64:~$ python3 /home/fernando/cursos/python/python-alura/001_python-comecando-com-a-linguagem/008-Organizando-ainda-melhor-o-nosso-codigo/adivinhacao.py
+fernando@debian10x64:~$
+
+Nada acontece! Ou seja, agora só conseguimos jogar os nossos jogos através do arquivo jogos.py. Vamos então tentar resolver isso no próximo vídeo, até lá!
+

@@ -255,3 +255,29 @@ Qual jogo?
 fernando@debian10x64:~$ python3 /home/fernando/cursos/python/python-alura/001_python-comecando-com-a-linguagem/008-Organizando-ainda-melhor-o-nosso-codigo/forca.py
 fernando@debian10x64:~$
 ~~~~
+
+
+
+
+- Adicionando o trecho abaixo, para forca também:
+
+~~~~python
+if (__name__ == "__main__"):
+    jogar()
+~~~~
+
+
+- Testando novamente:
+
+~~~~bash
+
+fernando@debian10x64:~$ python3 /home/fernando/cursos/python/python-alura/001_python-comecando-com-a-linguagem/008-Organizando-ainda-melhor-o-nosso-codigo/forca.py
+*********************************
+Bem vindo ao jogo de Forca!
+*********************************
+Fim do jogo
+fernando@debian10x64:~$ date
+Sun 17 Sep 2023 11:12:45 PM -03
+fernando@debian10x64:~$
+
+~~~~

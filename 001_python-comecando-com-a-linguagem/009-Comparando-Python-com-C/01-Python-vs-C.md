@@ -32,3 +32,16 @@ No capítulo 1 falamos sobre tipagem de variáveis, e o C é uma linguagem que p
 O resto do código é bem parecido, com algumas diferenças de sintaxe e nomenclatura, como por exemplo a sintaxe dos blocos, para definir um bloco no C devemos colocá-lo entre chaves e a indentação não é obrigatório, apesar de todos os desenvolvedores utilizarem por conta da formatação do código, já no Python só precisamos colocar os dois pontos e indentar o código do bloco; o C também te obriga a colocar ponto e vírgula ao final das instruções.
 
 Essas foram algumas das diferenças que podemos citar comparando os dois códigos. Agora veremos na hora da execução, mas no próximo vídeo :)
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+#  01 Python vs C
+
+## RESUMO
+
+- o C é uma linguagem que possui a tipagem estática, ou seja, quando declaramos uma variável, precisamos dizer qual será o tipo dela e esse tipo nunca mudará.
+
+- O Python, como já sabemos, é uma linguagem que possui a tipagem dinâmica, já que o tipo da variável varia de acordo com o valor que ela recebe, por isso que em Python não podemos declarar variáveis vazias, só definindo o seu nome, porque se não atribuirmos um valor a uma variável, o Python não saberá o seu tipo.

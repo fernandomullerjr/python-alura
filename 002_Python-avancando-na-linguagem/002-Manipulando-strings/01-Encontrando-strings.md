@@ -155,3 +155,47 @@ Jogando...
 
 
 Mas se digitarmos uma letra em maiúsculo, por exemplo a letra A, a mesma não é encontrada na palavra. O ideal é não fazermos essa diferenciação entre letras minúsculas e maiúsculas. Vamos resolver esse problema no próximo capítulo :)
+
+
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# 01 Encontrando letras
+
+fernando@debian10x64:~$ python3
+Python 3.8.3 (default, Jun  4 2023, 19:15:23)
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> palavra = "banana"
+>>>
+>>> type(palavra)
+<class 'str'>
+>>>
+>>> palavra.find("b")
+0
+>>>
+>>> palavra.find("n")
+2
+>>>
+>>> palavra.find("w")
+-1
+>>>
+>>>
+>>> palavra.find("n")
+2
+>>> for letra in palavra:
+...      print(letra)
+...
+b
+a
+n
+a
+n
+a
+>>>

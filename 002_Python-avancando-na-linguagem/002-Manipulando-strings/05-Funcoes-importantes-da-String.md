@@ -161,3 +161,34 @@ str.endswith(suffix[, start[, end]])
     Return True if the string ends with the specified suffix, otherwise return False. suffix can also be a tuple of suffixes to look for. With optional start, test beginning at that position. With optional end, stop comparing at that position.
 
 
+palavra.endswith("na")
+
+>>> palavra.endswith("na")
+True
+>>>
+
+
+
+
+
+
+
+str.lower()
+
+    Return a copy of the string with all the cased characters 4 converted to lowercase.
+
+    The lowercasing algorithm used is described in section 3.13 of the Unicode Standard.
+
+palavra2 = palavra.capitalize()
+palavra2
+palavra2.lower()
+
+>>> palavra2 = palavra.capitalize()
+>>>
+>>> palavra2
+'Banana'
+>>>
+>>>
+>>> palavra2.lower()
+'banana'
+>>>

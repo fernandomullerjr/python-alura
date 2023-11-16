@@ -5,7 +5,7 @@
 
 git status
 git add .
-git commit -m "Modulo 2 - aula 03 Iterando em uma palavra."
+git commit -m "Modulo 2 - aula 04 Recordando...."
 eval $(ssh-agent -s)
 ssh-add /home/fernando/.ssh/chave-debian10-github
 git push

@@ -360,3 +360,44 @@ css
 Encontrei a letra a na posição 2
 
 Isso indica que a letra "a" foi encontrada na terceira posição (índice 2) na palavra secreta "banana".
+
+
+
+
+
+
+
+
+
+
+
+## Testando
+
+- Dia 15/11/2023
+
+- Verificando o funcionamento e a posição que o jogo informa:
+
+~~~~bash
+fernando@debian10x64:~$ python3 /home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/002-Manipulando-strings/01-forca.py
+*********************************
+***Bem vindo ao jogo da Forca!***
+*********************************
+Qual letra? a
+Encontrei a letra a na posição 1
+Encontrei a letra a na posição 3
+Encontrei a letra a na posição 5
+Jogando...
+Qual letra? b
+Encontrei a letra b na posição 0
+Jogando...
+Qual letra? ^CTraceback (most recent call last):
+  File "/home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/002-Manipulando-strings/01-forca.py", line 26, in <module>
+    jogar()
+  File "/home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/002-Manipulando-strings/01-forca.py", line 13, in jogar
+    chute = input("Qual letra? ")
+KeyboardInterrupt
+
+fernando@debian10x64:~$
+
+
+~~~~

@@ -113,3 +113,51 @@ Jogando...
 ~~~~
 
 Agora a letra é encontrada na palavra, mesmo com os espaços a mais!
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# 05 Funções importantes da String
+
+Não queremos que essa distinção entre letras minúsculas e maiúsculas seja feita.
+
+
+
+- Documentação sobre "Text Sequence Type":
+
+<https://docs.python.org/3.8/library/stdtypes.html#text-sequence-type-str>
+
+
+
+- Testando
+
+ str.capitalize()
+
+    Return a copy of the string with its first character capitalized and the rest lowercased.
+
+
+
+palavra.capitalize()
+
+
+>>> palavra = "banana"
+>>>
+>>> palavra.capitalize()
+'Banana'
+>>>
+
+
+
+
+
+
+str.endswith(suffix[, start[, end]])
+
+    Return True if the string ends with the specified suffix, otherwise return False. suffix can also be a tuple of suffixes to look for. With optional start, test beginning at that position. With optional end, stop comparing at that position.
+
+

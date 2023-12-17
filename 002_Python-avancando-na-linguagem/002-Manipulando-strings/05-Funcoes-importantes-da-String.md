@@ -235,3 +235,135 @@ palavra2.lower()
 >>> palavra2.upper()
 'BANANA'
 >>>
+
+
+
+
+
+
+
+
+
+
+str.strip([chars])
+
+    Return a copy of the string with the leading and trailing characters removed. The chars argument is a string specifying the set of characters to be removed. If omitted or None, the chars argument defaults to removing whitespace. The chars argument is not a prefix or suffix; rather, all combinations of its values are stripped:
+    >>>
+
+    >>> '   spacious   '.strip()
+    'spacious'
+    >>> 'www.example.com'.strip('cmowz.')
+    'example'
+
+    The outermost leading and trailing chars argument values are stripped from the string. Characters are removed from the leading end until reaching a string character that is not contained in the set of characters in chars. A similar action takes place on the trailing end. For example:
+    >>>
+
+    >>> comment_string = '#....... Section 3.2.1 Issue #32 .......'
+    >>> comment_string.strip('.#! ')
+    'Section 3.2.1 Issue #32'
+
+>>> palavra = "   abcd   "
+>>>
+>>>
+>>> palavra.strip()
+'abcd'
+>>>
+
+
+
+
+
+
+
+
+
+
+- Testando
+
+~~~~bash
+fernando@debian10x64:~$ python3 /home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/002-Manipulando-strings/05-forca.py
+*********************************
+***Bem vindo ao jogo da Forca!***
+*********************************
+Qual letra?    u
+Jogando...
+Qual letra?    N
+Encontrei a letra n na posição 2
+Encontrei a letra n na posição 4
+Jogando...
+Qual letra?    a
+Encontrei a letra a na posição 1
+Encontrei a letra a na posição 3
+Encontrei a letra a na posição 5
+Jogando...
+Qual letra? B
+Encontrei a letra b na posição 0
+Jogando...
+Qual letra?      n
+Encontrei a letra n na posição 2
+Encontrei a letra n na posição 4
+Jogando...
+Qual letra? ^CTraceback (most recent call last):
+  File "/home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/002-Manipulando-strings/05-forca.py", line 27, in <module>
+    jogar()
+  File "/home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/002-Manipulando-strings/05-forca.py", line 13, in jogar
+    chute = input("Qual letra? ")
+KeyboardInterrupt
+
+fernando@debian10x64:~$
+~~~~
+
+
+
+
+
+
+
+
+
+
+- Código do jogo com o if usando upper:
+
+~~~~python
+def jogar():
+    print("*********************************")
+    print("***Bem vindo ao jogo da Forca!***")
+    print("*********************************")
+
+    palavra_secreta = "banana"
+
+    enforcou = False
+    acertou = False
+
+    while(not acertou and not enforcou):
+        
+        chute = input("Qual letra? ")
+        chute = chute.strip()
+
+        index = 0
+        for letra in palavra_secreta:
+            if (chute.upper() == letra.upper()):
+                print("Encontrei a letra {} na posição {}".format(letra, index))
+            index = index + 1
+
+        print("Jogando...")
+
+    print("Fim do jogo")
+
+if(__name__ == "__main__"):
+    jogar()
+
+~~~~
+
+
+Nesse código, o método upper() está sendo utilizado para converter tanto a letra da palavra secreta quanto a letra fornecida pelo usuário para maiúsculas antes de compará-las. Isso é feito para garantir que o jogo seja insensível a maiúsculas e minúsculas, ou seja, não importa se o usuário digita uma letra em maiúscula, minúscula ou uma combinação de ambas, o programa considerará como correta.
+
+A linha em questão é esta:
+
+python
+
+if (chute.upper() == letra.upper()):
+
+A função upper() converte uma string para maiúsculas. Portanto, ao comparar chute.upper() com letra.upper(), você está garantindo que a comparação seja feita de forma case-insensitive.
+
+Então, mesmo que a palavra secreta seja "banana" e o usuário insira "B" ou "b", o programa ainda detectará a letra correta e informará ao usuário que a letra foi encontrada na posição correta.

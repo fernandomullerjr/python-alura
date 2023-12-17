@@ -192,3 +192,46 @@ palavra2.lower()
 >>> palavra2.lower()
 'banana'
 >>>
+
+
+
+
+
+
+
+## PENDENTE
+- CONTINUA EM 06:25
+- Doc:
+<https://docs.python.org/3.8/library/stdtypes.html#text-sequence-type-str>
+
+
+
+
+
+- Função lower
+
+>>> "ABC".lower()
+'abc'
+>>>
+
+
+
+
+## UPPER
+
+ str.upper()
+
+    Return a copy of the string with all the cased characters 4 converted to uppercase. Note that s.upper().isupper() might be False if s contains uncased characters or if the Unicode category of the resulting character(s) is not “Lu” (Letter, uppercase), but e.g. “Lt” (Letter, titlecase).
+
+>>> palavra2
+'Banana'
+>>>
+>>>
+>>> palavra2.lower()
+'banana'
+>>>
+>>>
+>>>
+>>> palavra2.upper()
+'BANANA'
+>>>

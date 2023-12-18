@@ -96,6 +96,71 @@ Sequence Types — list, tuple, range
 
 
 
+>>> valores = [0,1,2,3,"x"]
+>>>
+>>> 6 in valores
+False
+>>>
+>>> 3 in valores
+True
+>>>
+>>>
+
+>>>
+>>> "a" in "banana"
+True
+>>>
+
+>>> valores[0]
+0
+>>>
+>>>
+>>>
+>>> valores[6]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>>
+
+>>>
+>>> valores[4]
+'x'
+>>>
+
+
+- Deu erro, porque os números estão com uma string misturada:
+
+>>> min(valores)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'str' and 'int'
+>>>
+
+
+- Resetando a lista, colocando apenas inteiros:
+
+>>> valores = [0,1,2,3]
+>>>
+
+>>>
+>>> min(valores)
+0
+>>>
+>>>
+>>> max(valores)
+3
+>>>
+>>> len(valores)
+4
+>>>
+
+>>> valores.append(7)
+>>>
+>>> valores
+[0, 1, 2, 3, 7]
+>>>
+
+
 
 # ###################################################################################################################################################################
 # ###################################################################################################################################################################
@@ -105,4 +170,5 @@ Sequence Types — list, tuple, range
 # RESUMO
 
 - Arrays e Listas são parecidos, mas não são iguais.
+
 

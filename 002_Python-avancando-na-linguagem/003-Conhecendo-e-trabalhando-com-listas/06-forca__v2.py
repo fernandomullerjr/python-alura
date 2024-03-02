@@ -4,22 +4,25 @@ def jogar():
     print("*********************************")
 
     palavra_secreta = "banana"
+    letras_acertadas = ["_", "_", "_", "_", "_", "_"]
 
     enforcou = False
     acertou = False
 
-    while(not acertou and not enforcou):
-        
+    print(letras_acertadas)
+
+    while (not acertou and not enforcou):
+
         chute = input("Qual letra? ")
-        chute = chute.strip()
+        chute = chute.strip()               ### Função  str.strip([chars])   Remove por padrão, quando não é passado um parametro, apenas espaços em branco.
 
         index = 0
         for letra in palavra_secreta:
             if (chute.upper() == letra.upper()):
-                print("Encontrei a letra {} na posição {}".format(letra, index))
+                letras_acertadas[index] = letra
             index = index + 1
 
-        print("Jogando...")
+        print(letras_acertadas)
 
     print("Fim do jogo")
 

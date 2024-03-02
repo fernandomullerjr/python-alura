@@ -156,6 +156,21 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 
 
 
+
+A função len() sempre retorna um valor inteiro que representa o número de elementos no objeto.
+
+Outras funções úteis para trabalhar com listas:
+
+    list.append(): Adiciona um novo item ao final da lista.
+    list.insert(): Insere um novo item em uma posição específica da lista.
+    list.remove(): Remove um item da lista pelo valor.
+    list.pop(): Remove um item da lista pela posição.
+    list.sort(): Ordena os elementos da lista.
+    list.reverse(): Inverte a ordem dos elementos da lista.
+
+
+
+
 # ###################################################################################################################################################################
 # ###################################################################################################################################################################
 # ###################################################################################################################################################################

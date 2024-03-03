@@ -46,3 +46,55 @@ Agora não conseguimos adicionar, nem remover elementos. Por exemplo:
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'tuple' object has no attribute 'append'
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# 01 O que são tuplas?
+
+## Material extra
+
+<https://docs.python.org/pt-br/3.8/tutorial/datastructures.html>
+
+
+>>> serie = range(0,10)
+>>>
+>>>
+>>> serie[3]
+3
+>>> dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+>>> dias
+['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+>>>
+>>> dias.append("Sábado2")
+>>>
+>>> dias.pop()
+'Sábado2'
+>>>
+>>> dias.pop()
+'Sábado'
+>>>
+>>> dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+>>>
+>>> dias
+['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+>>>
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# RESUMO
+
+- Tanto uma sequencia de inteiros, como um simples string por si só, são sequências.
+- Para criar uma tupla, é bem simples. É do mesmo jeito que criamos uma lista, mas ao invés de usar colchetes, usamos parênteses
+- É uma sequência imutável.

@@ -17,7 +17,8 @@ git status
 ## Transcrição
 
 Nesse vídeo veremos mais sobre tuplas e listas.
-Tuplas dentro de uma lista
+
+## Tuplas dentro de uma lista
 
 Agora queremos armazenar instrutores, cada um com o seu nome e sua idade:
 
@@ -46,7 +47,9 @@ E podemos também acessar, através da lista, somente um elemento da tupla. Por 
 39
 
 E podemos fazer o contrário também, podemos colocar listas dentro de tuplas :)
-Convertendo listas em tuplas
+
+
+## Convertendo listas em tuplas
 
 Agora temos a seguinte situação: precisamos ler de um arquivo, mas não sabemos quantas linhas esse arquivo tem. Então, vamos lendo linha por linha, e adicionando-as em uma lista:
 
@@ -63,7 +66,8 @@ Em algum momento o arquivo irá acabar, e quando esse momento chegar, não quere
 >>> linhas_tuple
 ('linha 1', 'linha 2', 'linha 3')
 
-Convertendo tuplas em listas
+
+## Convertendo tuplas em listas
 
 Com uma simples função, transformamos uma lista em uma tupla! E o contrário também pode ser feito, com a função list():
 
@@ -72,3 +76,15 @@ Com uma simples função, transformamos uma lista em uma tupla! E o contrário t
 <class 'list'>
 >>> linhas_list
 ['linha 1', 'linha 2', 'linha 3']
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# RESUMO
+
+- É possível converter listas em tuplas. Basta usar a função tuple()
+linhas_tuple = tuple(linhas)
+
+- Também é possível converter tuplas em listas. Basta usar a função list()
+linhas_list = list(linhas_tuple)

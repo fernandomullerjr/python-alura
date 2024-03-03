@@ -32,3 +32,9 @@ Selecione 2 alternativas
 # ###################################################################################################################################################################
 # RESPOSTA
 
+Uma diferença que encontramos entre list e tuple é na hora de criá-las, em que usamos [] ou ():
+
+>>> lista = [4,3,2,1]
+>>> tuple = (4,3,2,1)
+
+Outra diferença é a questão de podermos alterar a sequência ou não. Listas podem ser alteradas, podendo adicionar ou remover elementos. Tuples, uma vez criadas, não podem ser alteradas. Tuples são imutáveis .

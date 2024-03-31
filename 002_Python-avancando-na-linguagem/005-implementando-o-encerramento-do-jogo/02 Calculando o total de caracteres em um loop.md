@@ -46,3 +46,10 @@ Selecione uma alternativa
 acabou = ( total == len(palavra) )
 
     Correto! Carlos poderia ter simplesmente usado a própria função len, mas esse código definirá True para a variável acabou apenas quando total for igual ao tamanho da palavra.
+
+
+Só para deixar claro, usando a função len:
+
+    len(palavra)
+
+Já imprime o tamanho da string!

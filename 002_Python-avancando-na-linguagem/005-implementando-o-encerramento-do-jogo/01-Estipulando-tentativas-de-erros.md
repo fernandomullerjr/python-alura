@@ -266,6 +266,9 @@ Ao final do while, vamos verificar se a variável erros é igual a 6** e atribui
 Agora, ao executarmos o jogo e errar 6 vezes, o jogo é encerrado! 
 
 
+- O uso do "and" e do "or" no laço while funciona assim:
+o "and" executa o laço e para quando apenas 1 das condições já atenderem(passarem para *true* ou *false*, dependendo do caso).
+já o laço com "or", ele segue executando enquanto alguma das condições não for atendida, o laço só encerra quando as 2 condições forem atendidas.
 
 
 
@@ -446,3 +449,7 @@ acertou = "_" not in letras_acertadas
 
 - Observação:
 apesar do laço while utilizar uma condição com "and", ele considera apenas 1 das condições, se 1 ativar o true, o laço encerra!
+
+- O uso do "and" e do "or" no laço while funciona assim:
+o "and" executa o laço e para quando apenas 1 das condições já atenderem(passarem para *true* ou *false*, dependendo do caso).
+já o laço com "or", ele segue executando enquanto alguma das condições não for atendida, o laço só encerra quando as 2 condições forem atendidas.

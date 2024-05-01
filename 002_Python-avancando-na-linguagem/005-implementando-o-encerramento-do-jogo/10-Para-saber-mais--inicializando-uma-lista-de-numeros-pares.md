@@ -98,3 +98,64 @@ If you run this code, the output will be:
 vowels = ['e', 'o', 'a', 'a', 'e', 'o', 'a']
 
 This shows that the code successfully extracted all the lowercase vowels from the sentence "the rocket came back from mars".
+
+
+- Então ajustando o código abaixo:
+
+~~~~python
+inteiros = [1,3,4,5,7,8,9]
+pares = []
+for numero in inteiros:
+    if numero % 2 == 0:
+        pares.append(numero)
+~~~~
+
+Para usar list comprehensions, deve ficar assim:
+
+~~~~python
+inteiros = [1,3,4,5,7,8,9]
+pares = [pares.append(numero) for numero in inteiros if numero % 2 == 0] 
+~~~~
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# Opinião do instrutor
+
+Dado o código de geração da lista de pares abaixo:
+
+~~~~python
+inteiros = [1,3,4,5,7,8,9]
+pares = []
+for numero in inteiros:
+    if numero % 2 == 0:
+        pares.append(numero)
+~~~~
+
+O código usando List Comprehension relativo ficaria muito mais enxuto:
+
+~~~~python
+inteiros = [1,3,4,5,7,8,9]
+pares = [x for x in inteiros if x % 2 == 0]
+~~~~
+
+Repare o if depois do for que define a condição! Muito melhor não?
+
+List Comprehension é um dos recursos mais legais da linguagem Python :) 
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# RESPOSTA FINAL
+
+~~~~python
+inteiros = [1,3,4,5,7,8,9]
+pares = [x for x in inteiros if x % 2 == 0]
+~~~~

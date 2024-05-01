@@ -23,25 +23,26 @@ Aqui está uma explicação passo a passo do que o código faz:
 
 User
 como funciona o primeiro "x" exatamente?
+
 ChatGPT
 
 Claro, vou explicar mais detalhadamente.
 
 No código pares = [x for x in inteiros if x % 2 == 0], o primeiro x é a expressão que será incluída na lista pares. Vou explicar como isso funciona:
 
-python
-
+~~~~python
 pares = [x for x in inteiros if x % 2 == 0]
+~~~~
 
 Aqui está uma versão mais explícita do que está acontecendo:
 
-python
-
+~~~~python
 pares = []
 
 for x in inteiros:
     if x % 2 == 0:
         pares.append(x)
+~~~~
 
 Esses dois trechos de código fazem a mesma coisa. No primeiro trecho, é utilizada uma compreensão de lista, que é uma forma mais compacta e elegante de criar listas em Python.
 

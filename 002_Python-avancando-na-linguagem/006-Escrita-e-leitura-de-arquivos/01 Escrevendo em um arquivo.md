@@ -84,3 +84,79 @@ manga
 # ###################################################################################################################################################################
 # ###################################################################################################################################################################
 # 01 Escrevendo em um arquivo
+
+- Para abrir arquivos, usamos uma função built-in chamada "open"
+<https://docs.python.org/3.8/library/functions.html#open>
+
+ open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+
+The available modes are:
+
+~~~~markdown
+'r'
+	
+
+open for reading (default)
+
+'w'
+	
+
+open for writing, truncating the file first
+
+'x'
+	
+
+open for exclusive creation, failing if the file already exists
+
+'a'
+	
+
+open for writing, appending to the end of the file if it exists
+
+'b'
+	
+
+binary mode
+
+'t'
+	
+
+text mode (default)
+
+'+'
+	
+
+open for updating (reading and writing)
+~~~~
+
+
+
+open("palavras.txt", "w")
+
+arquivo = open("palavras.txt", "w")
+
+
+fernando@debian10x64:~$ python3
+Python 3.8.3 (default, Jun  4 2023, 19:15:23)
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>>
+>>> arquivo = open("palavras.txt", "w")
+>>>
+>>> arquivo
+<_io.TextIOWrapper name='palavras.txt' mode='w' encoding='UTF-8'>
+>>>
+
+
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# RESUMO
+

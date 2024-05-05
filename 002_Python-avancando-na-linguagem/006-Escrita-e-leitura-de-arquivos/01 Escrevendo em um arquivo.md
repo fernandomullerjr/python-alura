@@ -150,9 +150,89 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 
+arquivo.write("banana")
+
+>>>
+>>> arquivo.write("banana")
+6
+>>>
+>>>
 
 
 
+
+arquivo.write("melancia")
+
+arquivo.close()
+
+>>> arquivo.write("melancia")
+8
+>>>
+>>>
+>>> arquivo.close()
+>>>
+
+
+
+
+
+- Verificando o arquivo criado:
+
+~~~~bash
+fernando@debian10x64:~$ ls
+arquivo-de-teste.txt  cursos     event-simulator.yaml         kubectl  nrdiag-filelist.txt  output.txt    python             setar-hora.sh        terraform_1.1.5_linux_amd64.zip  testes             work
+aws                   Desktop    go                           laravel  nrdiag-output.json   palavras.txt  Python-3.8.3       snap                 terraform.tfstate                tmp.json
+awscliv2.zip          Documents  go1.12.7.linux-amd64.tar.gz  Music    nrdiag-output.zip    Pictures      Python-3.8.3.tgz   static-busybox.yaml  teste1.txt                       Videos
+bin                   Downloads  index.html                   nrdiag   out-3.txt            Public        rascunho-teste.md  Templates            teste-kubernetes-aula9           webapp-green.yaml
+fernando@debian10x64:~$
+fernando@debian10x64:~$ cat palavras.txt
+bananamelancia
+fernando@debian10x64:~$
+~~~~
+
+Porém as palavras ficaram tudo juntas!
+
+Porém as palavras ficaram tudo juntas!
+
+
+
+
+
+
+- Vamos usar o append agora, usando o parametro "a"
+
+arquivo = open("palavras.txt", "a")
+arquivo.write("morango\n")
+arquivo.write("maça\n")
+arquivo.close()
+
+>>>
+>>> arquivo = open("palavras.txt", "a")
+>>>
+>>> arquivo.write("morango\n")
+8
+>>> arquivo.write("maça\n")
+5
+>>> arquivo.close()
+>>>
+
+
+- Validando
+
+~~~~bash
+fernando@debian10x64:~$ cat palavras.txt
+bananamelanciamorango
+maça
+fernando@debian10x64:~$
+fernando@debian10x64:~$
+~~~~
+
+Palavra "morango" foi adicionada colada nas demais
+A palavra "maça" foi adicionada corretamente
+
+
+
+- Movimentando para outra pasta o arquivo "palavras.txt"
 
 
 

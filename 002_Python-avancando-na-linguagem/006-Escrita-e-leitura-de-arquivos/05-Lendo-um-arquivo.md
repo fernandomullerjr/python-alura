@@ -114,3 +114,122 @@ O arquivo é como um fluxo de linhas, que começa no início do arquivo, como se
 
 Ou seja, para ler o arquivo novamente, devemos fechá-lo e abri-lo novamente.
 
+
+
+
+
+- Lendo linha por linha
+
+arquivo = open("palavras.txt", "r")
+for linha in arquivo:
+    print(linha)
+
+
+>>>
+>>>
+>>>
+>>> arquivo = open("palavras.txt", "r")
+>>> for linha in arquivo:
+...     print(linha)
+...
+banana
+
+melancia
+
+morango
+
+maça
+
+>>>
+
+Porém está sendo adicionda uma quebra de linha adicional.
+
+
+
+Mas podemos reparar que existe uma linha entre cada fruta. Por que isso acontece? Para ver melhor, vamos ler somente uma linha do arquivo, com a função readLine():
+
+>>> arquivo = open("palavras.txt", "r")
+>>> linha = arquivo.readline()
+>>> linha
+'banana\n'
+
+
+>>>
+>>> arquivo = open("palavras.txt", "r")
+>>>
+>>>
+>>> linha = arquivo.readline()
+>>>
+>>>
+>>> linha
+'banana\n'
+>>>
+
+
+
+- Revisando o for
+
+arquivo = open("palavras.txt", "r")
+for linha in arquivo:
+    print(linha, end="\n")
+
+>>>
+>>> arquivo = open("palavras.txt", "r")
+for linha in arquivo:>>>
+...     print(linha, end="\n")
+...
+banana
+
+melancia
+
+morango
+
+maça
+
+>>>
+>>>
+>>>
+
+
+
+
+- Como recebemos a string com o "\n", 
+
+>>>
+>>>
+>>>
+>>> linha
+'maça\n'
+>>>
+
+
+- Para evitar isto, iremos utilizar a função strip()
+- A função strip() remove espaços em branco e novas linhas.
+linha.strip()
+
+>>>
+>>>
+>>> linha.strip()
+'maça'
+>>>
+>>>
+>>>
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# RESUMO
+
+- Strings das linhas tem uma quebra de linha embutida:
+'maça\n'
+
+- O print também tem uma quebra de linha embutida:
+print(linha, end="\n")
+
+- A quebra de linha duplicada é devido o string e o print adicionarem quebras de linha "\n" cada um deles.
+
+- Para remover quebras de linhas das strings, usar a função strip()
+linha.strip()

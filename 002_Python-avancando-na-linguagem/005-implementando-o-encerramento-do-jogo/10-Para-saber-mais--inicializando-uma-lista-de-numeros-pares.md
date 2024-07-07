@@ -60,6 +60,7 @@ Conditionals are important because they allow list comprehensions to filter out 
 >>> [char for char in sentence if char in "aeiou"]
 ['e', 'o', 'e', 'a', 'e', 'a', 'o', 'a']
 
+
 - Código deste exemplo acima:
 
 ~~~~python

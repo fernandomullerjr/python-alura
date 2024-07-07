@@ -213,3 +213,144 @@ def jogar():
 if(__name__ == "__main__"):
     jogar()
 ~~~~
+
+
+
+- Ajustando
+adicionando import:
+import random
+
+e o código
+
+~~~~python
+import random
+
+def jogar():
+
+    print("*********************************")
+    print("***Bem vindo ao jogo da Forca!***")
+    print("*********************************")
+
+    arquivo = open("palavras.txt", "r")
+    palavras = []
+
+    for linha in arquivo:
+        linha = linha.strip()
+        palavras.append(linha)
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(palavras))
+
+    palavra_secreta = palavras[numero].upper()
+    letras_acertadas = ["_" for letra in palavra_secreta]
+~~~~
+
+
+e removendo o trecho:
+    palavra_secreta = "maça".upper()
+
+
+- DEPOIS
+
+~~~~PYTHON
+import random
+
+def jogar():
+    print("*********************************")
+    print("***Bem vindo ao jogo da Forca!***")
+    print("*********************************")
+
+    arquivo = open("palavras.txt", "r")
+    palavras = []
+
+    for linha in arquivo:
+        linha = linha.strip()
+        palavras.append(linha)
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(palavras))
+
+    palavra_secreta = palavras[numero].upper()
+    letras_acertadas = ["_" for letra in palavra_secreta]
+
+    enforcou = False
+    acertou = False
+    erros = 0
+
+    print(letras_acertadas)
+
+    while(not enforcou and not acertou):
+
+        chute = input("Qual letra? ")
+        chute = chute.strip().upper()
+
+        if(chute in palavra_secreta):
+            index = 0
+            for letra in palavra_secreta:
+                if(chute == letra):
+                    letras_acertadas[index] = letra
+                index += 1
+        else:
+            erros += 1
+
+        enforcou = erros == 6
+        acertou = "_" not in letras_acertadas
+        print(letras_acertadas)
+
+
+    if(acertou):
+        print("Você ganhou!!")
+    else:
+        print("Você perdeu!!")
+    print("Fim do jogo")
+
+if(__name__ == "__main__"):
+    jogar()
+~~~~
+
+
+- Testando
+/home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos/08-forca.py
+
+~~~~bash
+fernando@debian10x64:~$ cd /home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$ python3 /home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos/08-forca.py
+*********************************
+***Bem vindo ao jogo da Forca!***
+*********************************
+['_', '_', '_', '_', '_', '_', '_', '_']
+Qual letra? m
+['M', '_', '_', '_', '_', '_', '_', '_']
+Qual letra? o
+['M', '_', '_', '_', '_', '_', '_', '_']
+Qual letra? e
+['M', 'E', '_', '_', '_', '_', '_', '_']
+Qual letra? l
+['M', 'E', 'L', '_', '_', '_', '_', '_']
+Qual letra? a
+['M', 'E', 'L', 'A', '_', '_', '_', 'A']
+Qual letra? n
+['M', 'E', 'L', 'A', 'N', '_', '_', 'A']
+Qual letra? c
+['M', 'E', 'L', 'A', 'N', 'C', '_', 'A']
+Qual letra? i
+['M', 'E', 'L', 'A', 'N', 'C', 'I', 'A']
+Você ganhou!!
+Fim do jogo
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$ date
+Sun 07 Jul 2024 01:33:56 AM -03
+fernando@debian10x64:~/cursos/python/python-alura/002_Python-avancando-na-linguagem/006-Escrita-e-leitura-de-arquivos$
+~~~~
+
+
+
+
+
+

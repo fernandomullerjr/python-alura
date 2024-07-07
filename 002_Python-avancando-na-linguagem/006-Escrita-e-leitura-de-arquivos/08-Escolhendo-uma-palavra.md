@@ -73,7 +73,9 @@ def jogar():
 ~~~~
 
 Agora já temos todas as palavras na lista, mas como selecionar uma delas aleatoriamente?
-Gerando um número aleatório
+
+
+### Gerando um número aleatório
 
 Sabemos que cada elemento da lista possui uma posição, e vimos no treinamento anterior como gerar um número aleatório, vamos relembrar?
 
@@ -96,7 +98,9 @@ Para gerar o número aleatório, utilizamos a biblioteca e chamamos a função r
 3
 
 Sabendo disso, vamos implementar esse código no nosso jogo.
-Selecionando a palavra
+
+
+### Selecionando a palavra
 
 Primeiramente, devemos importar a biblioteca. Vamos gerar um número de 0 até a quantidade de palavras da nossa lista, ou seja, vamos utilizar a função len, para saber o tamanho da lista:
 
@@ -151,3 +155,61 @@ def jogar():
 Podemos executar o jogo agora, e perceber que a palavra é selecionada aleatoriamente!
 
 Mas agora o nosso arquivo, a nossa função cresceu bastante, com várias funcionalidades e responsabilidades. Então, no próximo capítulo, organizaremos melhor o nosso código, separando-o em funções e deixando-o mais fácil de entender.
+
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+#  08 Escolhendo uma palavra
+
+
+- ANTES
+
+~~~~PYTHON
+def jogar():
+    print("*********************************")
+    print("***Bem vindo ao jogo da Forca!***")
+    print("*********************************")
+
+    palavra_secreta = "maça".upper()
+    letras_acertadas = ["_" for letra in palavra_secreta]
+
+    enforcou = False
+    acertou = False
+    erros = 0
+
+    print(letras_acertadas)
+
+    while(not enforcou and not acertou):
+
+        chute = input("Qual letra? ")
+        chute = chute.strip().upper()
+
+        if(chute in palavra_secreta):
+            index = 0
+            for letra in palavra_secreta:
+                if(chute == letra):
+                    letras_acertadas[index] = letra
+                index += 1
+        else:
+            erros += 1
+
+        enforcou = erros == 6
+        acertou = "_" not in letras_acertadas
+        print(letras_acertadas)
+
+
+    if(acertou):
+        print("Você ganhou!!")
+    else:
+        print("Você perdeu!!")
+    print("Fim do jogo")
+
+if(__name__ == "__main__"):
+    jogar()
+~~~~

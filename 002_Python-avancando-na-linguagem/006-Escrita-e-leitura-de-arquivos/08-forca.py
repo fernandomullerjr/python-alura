@@ -1,3 +1,4 @@
+#importante lembrar do import do random
 import random
 
 def jogar():

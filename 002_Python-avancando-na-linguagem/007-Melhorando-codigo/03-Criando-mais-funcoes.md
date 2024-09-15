@@ -143,7 +143,9 @@ def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
         index += 1
 ~~~~
 
-Função para imprimir as mensagens de vencedor e perdedor do jogo
+
+
+### Função para imprimir as mensagens de vencedor e perdedor do jogo
 
 Por fim, vamos remover a mensagem de fim de jogo e exportar os códigos que imprimem as mensagens de vencedor e perdedor do jogo:
 
@@ -268,6 +270,31 @@ def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
             letras_acertadas[index] = letra
         index += 1
 ~~~~
+
+
+
+
+
+Por fim, vamos remover a mensagem de fim de jogo e exportar os códigos que imprimem as mensagens de vencedor e perdedor do jogo:
+
+~~~~python
+def jogar():
+    # restante do código omitido
+    if (acertou):
+        imprime_mensagem_vencedor()
+    else:
+        imprime_mensagem_perdedor()
+
+    print("Fim do jogo")
+
+def imprime_mensagem_vencedor():
+    print("Você ganhou!")
+
+def imprime_mensagem_perdedor():
+    print("Você perdeu!")
+~~~~
+
+Agora o nosso código está muito mais organizado e legível.
 
 
 

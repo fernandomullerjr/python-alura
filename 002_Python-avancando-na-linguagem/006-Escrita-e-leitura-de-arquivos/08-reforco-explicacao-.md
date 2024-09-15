@@ -19,10 +19,10 @@ arquivo.close()
 
 Seleção da palavra secreta:
 
-~~~~python
+```python
 numero = random.randrange(0, len(palavras))
 palavra_secreta = palavras[numero].upper()
-~~~~
+```
 
     random.randrange(0, len(palavras)) gera um índice aleatório dentro do intervalo de 0 até o número de palavras na lista palavras (não inclusivo).
     palavras[numero] seleciona a palavra da lista palavras usando o índice aleatório gerado.

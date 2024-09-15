@@ -325,8 +325,12 @@ Sun Sep 15 13:43:01 -03 2024
 # ###################################################################################################################################################################
 # RESUMO
 
-pontos importantes
+### Pontos importantes
 
+- Sempre deixar o init ao final do arquivo
+if(__name__ == "__main__")
+
+- Passando parametros para a função:
 
 Mas a função inicializa_letras_acertadas() precisa ter acesso à palavra_secreta, pois ela não existe dentro da função, já que uma função define um escopo, e as variáveis declaradas dentro de uma função só estão disponíveis dentro dela.
 Então, ao chamar a função inicializa_letras_acertadas(), vamos passar palavra_secreta para ela por parâmetro:
@@ -339,10 +343,9 @@ def inicializa_letras_acertadas(palavra):
     return ["_" for letra in palavra]
 ~~~~
 
-
 1. Aqui é passado o string:
 letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
 
-2. Aqui recebe o string:
+1. Aqui recebe o string:
 def inicializa_letras_acertadas(palavra)
 

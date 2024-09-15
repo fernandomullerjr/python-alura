@@ -86,7 +86,9 @@ def jogar():
     # restante do código omitido
 ~~~~
 
-Retornando um valor em uma função
+
+
+### Retornando um valor em uma função
 
 Só que como faremos a função carrega_palavra_secreta() retornar um valor, no caso a palavra_secreta?
 
@@ -109,7 +111,9 @@ def carrega_palavra_secreta():
     return palavra_secreta
 ~~~~
 
-Passando valores por parâmetro para a função
+
+
+### Passando valores por parâmetro para a função
 
 Agora vamos criar uma função que inicializa a lista de letras acertadas com o caractere _. Criaremos a função inicializa_letras_acertadas():
 
@@ -195,3 +199,150 @@ if (__name__ == "__main__"):
 ~~~~
 
 Tudo continua funcionando normalmente, mas agora com o nosso código um pouco mais legível e organizado. No próximo vídeo extrairemos mais código para mais funções.
+
+
+
+
+
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# 01 Organizando o código em funções
+
+
+
+Só que a função jogar() irá reclamar que a palavra_secreta não existe. O que queremos é que, ao executar a função carrega_palavra_secreta(), que ela retorne a palavra secreta para nós, assim poderemos guardá-la em uma variável:
+
+~~~~python
+import random
+
+def jogar():
+
+    imprime_mensagem_abertura()
+
+    palavra_secreta = carrega_palavra_secreta()
+
+    letras_acertadas = ["_" for letra in palavra_secreta]
+
+    # restante do código omitido
+~~~~
+
+
+
+### Retornando um valor em uma função
+
+Só que como faremos a função carrega_palavra_secreta() retornar um valor, no caso a palavra_secreta?
+A palavra_secreta já existe, mas só dentro da função carrega_palavra_secreta(). Para que ela seja retornada, utilizamos a palavra-chave return:
+
+~~~~python
+def carrega_palavra_secreta():
+    arquivo = open("palavras.txt", "r")
+    # restante do código omitido
+    palavra_secreta = palavras[numero].upper()
+
+    return palavra_secreta
+~~~~
+
+
+
+
+
+
+
+
+
+Agora vamos criar uma função que inicializa a lista de letras acertadas com o caractere _. Criaremos a função inicializa_letras_acertadas():
+
+~~~~python
+import random
+
+def jogar():
+    # restante do código omitido
+
+    letras_acertadas = inicializa_letras_acertadas()
+
+    # restante do código omitido
+
+def inicializa_letras_acertadas():
+    return ["_" for letra in palavra_secreta]
+~~~~
+
+
+
+
+Mas a função inicializa_letras_acertadas() precisa ter acesso à palavra_secreta, pois ela não existe dentro da função, já que uma função define um escopo, e as variáveis declaradas dentro de uma função só estão disponíveis dentro dela.
+Então, ao chamar a função inicializa_letras_acertadas(), vamos passar palavra_secreta para ela por parâmetro:
+
+~~~~python
+def jogar():
+
+    # restante do código omitido
+
+    letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
+
+    # restante do código omitido
+
+def inicializa_letras_acertadas(palavra):
+    return ["_" for letra in palavra]
+~~~~
+
+
+
+
+
+- Efetuando teste
+
+> cd /home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/007-Melhorando-codigo/
+> python3 /home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/007-Melhorando-codigo/01-forca.py
+*********************************
+***Bem vindo ao jogo da Forca!***
+*********************************
+['_', '_', '_', '_']
+Qual letra? a
+['_', 'A', '_', 'A']
+Qual letra? m
+['M', 'A', '_', 'A']
+Qual letra? c
+['M', 'A', '_', 'A']
+Qual letra? ç
+['M', 'A', 'Ç', 'A']
+Você ganhou!!
+Fim do jogo
+> date
+Sun Sep 15 13:43:01 -03 2024
+
+
+
+
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# RESUMO
+
+pontos importantes
+
+
+Mas a função inicializa_letras_acertadas() precisa ter acesso à palavra_secreta, pois ela não existe dentro da função, já que uma função define um escopo, e as variáveis declaradas dentro de uma função só estão disponíveis dentro dela.
+Então, ao chamar a função inicializa_letras_acertadas(), vamos passar palavra_secreta para ela por parâmetro:
+
+~~~~python
+def jogar():
+    letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
+
+def inicializa_letras_acertadas(palavra):
+    return ["_" for letra in palavra]
+~~~~
+
+
+1. Aqui é passado o string:
+letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
+
+2. Aqui recebe o string:
+def inicializa_letras_acertadas(palavra)
+

@@ -1,14 +1,27 @@
-05
-Melhorando a apresentação da forca
-Próxima Atividade
 
-Transcrição
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# PUSH
+
+git status
+git add .
+git commit -m "Módulo 7 - 05 Melhorando a apresentação da forca."
+git push
+git status
+
+
+# ###################################################################################################################################################################
+# ###################################################################################################################################################################
+# 05 Melhorando a apresentação da forca
+
+## Transcrição
 
 Com a melhor organização do nosso código, vamos melhorar a exibição, a apresentação da forca, deixando o jogo mais amigável.
 Novas mensagens de vencedor e perdedor
 
 Vamos começar com a mensagem de perdedor, alterando a função imprime_mensagem_perdedor. Ela ficará assim:
 
+~~~~python
 def imprime_mensagem_perdedor(palavra_secreta):
     print("Puxa, você foi enforcado!")
     print("A palavra era {}".format(palavra_secreta))
@@ -28,9 +41,11 @@ def imprime_mensagem_perdedor(palavra_secreta):
     print("   \_             _/       ")
     print("     \_         _/         ")
     print("       \_______/           ")
+~~~~
 
 Agora ela recebe a palavra_secreta por parâmetro, então não podemos esquecer de passá-la no momento que chamarmos a função:
 
+~~~~python
 def jogar():
 
     # restante do código omitido
@@ -39,9 +54,11 @@ def jogar():
         imprime_mensagem_vencedor()
     else:
         imprime_mensagem_perdedor(palavra_secreta)
+~~~~
 
 Do mesmo jeito, vamos refazer a mensagem de vencedor, na função imprime_mensagem_vencedor:
 
+~~~~python
 def imprime_mensagem_vencedor():
     print("Parabéns, você ganhou!")
     print("       ___________      ")
@@ -54,11 +71,13 @@ def imprime_mensagem_vencedor():
     print("           ) (          ")
     print("         _.' '._        ")
     print("        '-------'       ")
+~~~~
 
 Desenhando a forca
 
 Por fim, o jogo da forca não seria o jogo da forca se não mostrássemos a forca, juntamente com o seu personagem. Vamos criar a função desenha_forca, que recebe os erros por parâmetro. Para cada valor de erros, a função imprime um desenho diferente:
 
+~~~~python
 def desenha_forca(erros):
     print("  _______     ")
     print(" |/      |    ")
@@ -108,9 +127,12 @@ def desenha_forca(erros):
     print(" |            ")
     print("_|___         ")
     print()
+~~~~
+
 
 Para finalizar, devemos chamar essa função quando o jogador erra, dentro do else e aumentar o limite de erros para 7:
 
+~~~~python
 while (not acertou and not enforcou):
 
     chute = pede_chute()
@@ -126,5 +148,31 @@ while (not acertou and not enforcou):
     print(letras_acertadas)
 
 # restante do código omitido
+~~~~
 
 Com isso, chegamos ao final da implementação do nosso jogo da forca!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## dia 09/10/2024
+
+~~~~bash
+> python3 05-forca.py
+/home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/007-Melhorando-codigo/05-forca.py:41: SyntaxWarning: invalid escape sequence '\ '
+  print(" |      \     ")
+/home/fernando/cursos/python/python-alura/002_Python-avancando-na-linguagem/007-Melhorando-codigo/05-forca.py:47: SyntaxWarning: invalid escape sequence '\|'
+  print(" |      \|    ")
+/home/fernando/cursos/python/python-alura/002_Python-avancando-na-
+~~~~

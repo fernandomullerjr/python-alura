@@ -391,6 +391,7 @@ if(__name__ == "__main__"):
 
 - Testando:
 
+~~~~python
 def desenha_forca(erros):
     print("  _______     ")
     print(" |/      |    ")
@@ -440,3 +441,5 @@ def desenha_forca(erros):
     print(" |            ")
     print("_|___         ")
     print()
+~~~~
+

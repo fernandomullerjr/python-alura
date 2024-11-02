@@ -150,6 +150,16 @@ restaurante.py
 
 
 
+
+- Ao executar o código
+ele retorna somente a posição do objeto
+
+>
+> python3 /home/fernando/cursos/python/python-alura/003_python-aplicando-orientacao-objetos/001-Classe/oo-sabor-express/modelos/restaurante.py
+[<__main__.Restaurante object at 0x7f776d47db50>, <__main__.Restaurante object at 0x7f776d47db80>]
+
+
+
 # ###################################################################################################################################################################
 # ###################################################################################################################################################################
 # RESUMO
